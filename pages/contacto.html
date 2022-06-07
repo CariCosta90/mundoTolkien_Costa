@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mundo Tolkien - Contacto</title>
+    
+    <!-- link a fuente de títulos -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+
+    <!-- link al css -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="contactoHeader">   
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="peliculas.html">Peliculas</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="mundo_tolkien.html">Mundo Tolkien</a></li>
+                <li class="pagActual"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>       
+        
+    </header>
+
+    <main>
+        <!-- primera sección: Formulario de contacto -->
+        <section>
+            <h1 class="tituloForm">Formulario de contacto</h1>
+
+            <form action="">
+                <fieldset class="form">
+                    
+                    <!-- <legend class="legend">Formulario de Contacto</legend> -->
+                    
+                    <div class="nombre">
+                        <label class="nombreLabel" for="Nombre">
+                            Nombre
+                        </label>
+                        <input class="nombreInput" type="text" name="Nombre" placeholder="Tu nombre">
+                    </div>
+        
+                    <div class="email">
+                        <label for="mail">Email</label>
+                        <input type="email" name="mail" placeholder="Tu e-mail">
+                    </div>
+        
+                    <div class="pais">
+                        <label for="pais">País</label>
+                        <select name="pais" id="">
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Chile">Chile</option>
+                        </select>         
+                    </div>
+                                
+                    <div class="consulta">
+                        <label class="consultaLabel" for="Consulta">Tus comentarios</label>
+                        <textarea class="consultaCuadro" name="Consulta" id="Consulta" cols="50" rows="5" placeholder="Ingresa tus comentarios o consultas"></textarea>                   
+                    </div>
+
+                    <div class="adjuntos">
+                        <label for="adjuntos">Archivos adjuntos</label>
+                        <input type="file" name="archivo">
+                    </div>
+        
+                    <div class="botones_form">
+                        <input type="submit" value="Envialo">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </fieldset>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footerP">Created by Carina Costa</p> 
+        <p class="parrafo2">© Todos los derechos reservados</p>      
+    </footer>
+    
+</body>
+</html>

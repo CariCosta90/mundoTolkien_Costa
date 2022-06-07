@@ -1,0 +1,729 @@
+
+/* importación de fuente de parrafos */
+@import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap');
+/* importación fuente de citas */
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos del header */
+
+header{
+    height: 300px; 
+}
+
+
+/* estilo del header del index */
+.indexHeader{
+    background-image: url(../img/home_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 100% -150px;  
+}
+
+/* estilo del header de pag peliculas */
+.peliculasHeader{
+    background-image: url(../img/banner_peliculas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50%; 
+}
+
+/* estilo del header de pag novedades */
+.novedadesHeader{
+    background-image: url(../img/banner_novedades_2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: 50% -20px; 
+}
+
+/* estilo del header de pag Mundo Tolkien */
+.mTolkienHeader{
+    background-image: url(../img/banner_razas.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: 50% -300px; 
+}
+
+/* estilo del header de pag contacto */
+.contactoHeader{
+    background-image: url(../img/banner_contacto_2.JPG);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: 50% -120px; 
+}
+
+/* estilos de los botones del nav */
+
+/* esta linea en el ul es para colocar los botones a la derecha y abajo */
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    list-style: none;
+    margin: 0 20px;
+    height: 280px; 
+}
+/* styling de las cajas del nav */
+nav ul li{
+    background-color: #2A4F69; 
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 3px 7px 8px 0px rgba(114, 90, 90, 0.8); 
+    margin: 5px;    
+}
+
+
+/* remover estilo de los links */
+nav ul li a{
+    color: #CEB773;
+    text-decoration: none;
+    font-family: 'Macondo', cursive;
+    font-size: larger;
+}
+
+/* efecto hover */
+
+nav ul li a:hover{
+    color: #2A4F69;
+    background-color: #CEB773;
+    border-radius: 2px;
+}
+
+/* nav de la pagina actual */
+.pagActual{
+    background-color: rgba(42, 79, 105, 0.5);
+}
+.pagActual a {
+    color: rgba(206, 183, 115, 0.5);
+}
+
+/* estilos generales del body */
+body{
+     background-image: url(../img/map_4.jpg);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: 0 0;
+}
+main{
+    background-color: rgba(42, 79, 105,0.85);
+    margin: 2% 5% 2% 5%;
+    padding: 5px;
+}
+h1{
+    padding: 10px;
+    margin-left: 8%;
+    font-size: 38px;
+    font-family: 'Macondo', cursive;
+    color: #CEB773;    
+    text-shadow: 3px 5px 2px #000000;    
+}
+h2{
+    padding: 10px;
+    margin-left: 8%;
+    font-size: 30px;
+    font-family: 'Macondo', cursive;
+    color: #CEB773;
+    text-shadow: 3px 5px 2px #000000;
+}
+h3{
+    padding: 10px;
+    margin-left: 8%;
+    font-size: 20px;
+    font-family: 'Macondo', cursive;
+    color: #CEB773;
+    text-shadow: 3px 5px 2px #000000;
+}
+p{  
+    color: #CEB773;
+    font-family: 'Poly', serif;
+    font-size: 16px;
+    margin: 50px;
+    line-height: 25px;
+}
+
+/* ! inician estilos especificos del home*/
+
+/* sección resumen con grid */
+/* estilos del padre */
+.contenedor{
+    display: grid;
+    grid-template-areas:    "titulo titulo titulo"
+                            "parrafo1 parrafo1 img1"
+                            "parrafo4 parrafo4 parrafo4"
+                            "cita cita cita"
+                            "titulo2 titulo2 titulo2"
+                            "parrafo2 parrafo2 img2"
+                            "parrafo3 parrafo3 parrafo3";  
+    gap: 30px;
+    margin: 10px;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+/* estilos de los hijos grid */
+.contenedor h1{
+    grid-area: titulo;
+}
+.parrafoUno{
+    grid-area: parrafo1;
+}
+.parrafoCuatro{
+    grid-area: parrafo4;
+}
+.fellowship{
+    width: 100%;
+    grid-area: img1;
+}
+.citaCompleta{
+    grid-area: cita;
+    background-color: rgba(37, 67, 89, 0.8);
+    text-align: right;
+    padding: 5px;
+    box-shadow: 5px 5px 15px 5px black;
+}
+.cita{
+    display: inline-block;        
+    color: lightgrey;
+    font-family: 'Babylonica', cursive;
+    color: white;
+    font-size: 30px;
+}
+
+.referencia{
+    display: inline-block;    
+    margin-left: 5%;
+    color: white;
+    font-size: 20px;
+    text-align: right;
+}
+.contenedor h2{
+    grid-area: titulo2;
+}
+.retratoAutor{
+    grid-area: img2;
+    width: 80%;
+}
+.parrafoDos{
+    grid-area: parrafo2;
+}
+.parrafoTres{
+    grid-area: parrafo3;
+}
+
+/* tarjetas libros con flex */
+  .books{
+    display: flex;
+    flex-wrap: no-wrap; 
+    justify-content: space-around;
+  }
+  .libro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    background-color: floralwhite;
+}
+.bookP{
+    color: #000000;
+    font-family: 'Poly', cursive;
+}
+.bookA{
+    text-align: center;
+    color: #CEB773;
+    text-decoration: none;
+    font-family: 'Macondo', cursive;
+    font-size: larger;
+    background-color: #2A4F69;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* * responsive home - tablet */
+
+@media screen and (max-width:1024px){
+    .contenedor{
+        display: grid;
+        grid-template-areas:    "titulo titulo"
+                                "parrafo1 parrafo1"
+                                "img1 img1"
+                                "parrafo4 parrafo4"
+                                "cita cita"
+                                "titulo2 titulo2" 
+                                "parrafo2 parrafo2"
+                                "img2 img2"
+                                "parrafo3 parrafo3";  
+        grid-template-columns: 1fr 1fr;
+    }
+ /* ajuste de lista de libros */
+
+    .books{
+        flex-direction: column;
+        align-items: center;
+        margin: 40px;
+      }
+
+      /* ajuste de los botones del nav (todas las paginas)*/
+      nav ul li a{
+        font-size: large;
+    }
+}
+
+/* * responsive home - mobile */
+
+@media screen and (max-width:600px){
+ .cita{
+     font-size: 1.3rem;
+ }
+ .referencia{
+     font-size: 1rem;
+ }
+ .indexHeader{
+    background-position: 80% -150px;  
+ }
+ 
+}
+
+
+/* * responsive nav todos - mobile */
+
+@media screen and (max-width:600px) {
+    header{
+        height: 180px;
+    }
+    nav ul li a{
+        font-size: small;
+    }
+    nav ul{
+        flex-direction: column;
+        height: 170px;
+    }
+    nav ul li{
+        padding: 3px;
+        margin: 2px;
+    }
+
+}
+
+/* estilos especificos de página peliculas */
+
+main .musica{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+main .musica iframe{
+    margin: 10px;
+    max-width: 30rem;
+    min-width: 15rem;
+}
+
+/* padre grid */
+.locaciones{
+    display: grid;
+    grid-template-areas:
+    "tituloLocaciones	tituloLocaciones	tituloLocaciones"
+    "subtitLocUno	subtitLocUno	subtitLocUno"
+    "locParrafoUno	locParrafoUno	locImg1"
+    "locImg2	locParrafoDos	locImg1"
+    "locImg2	locParrafoTres	locParrafoTres"
+    "subtitLocDos	subtitLocDos	subtitLocDos"
+    "locParrafoCuatro	locParrafoCuatro	locParrafoCuatro"
+    "locImg4	locParrafoCinco	locImg3"
+    "locParrafoSeis	locParrafoSeis	locParrafoSeis"
+    "locParrafoSiete	locParrafoSiete	locParrafoSiete"
+    "subtitLocTres	subtitLocTres	subtitLocTres"
+    "locParrafoOcho	locParrafoOcho	locParrafoOcho"
+    "locParrafoNueve	locParrafoNueve	locImg5"
+    "locImg6	locParrafoDiez	locParrafoDiez"
+    "mapa	mapa	mapa";
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+}
+/* hijos grid */
+.tituloLocaciones{
+    grid-area: tituloLocaciones;
+}
+.subtitLocUno{
+    grid-area: subtitLocUno;
+}
+.locParrafoUno{
+    grid-area: locParrafoUno;
+}
+.locParrafoDos{
+    grid-area: locParrafoDos;
+}
+.locParrafoTres{
+    grid-area: locParrafoTres;
+}
+.subtitLocDos{
+    grid-area: subtitLocDos;
+}
+.locParrafoCuatro{
+    grid-area: locParrafoCuatro;
+}
+.locParrafoCinco{
+    grid-area: locParrafoCinco;
+}
+.locParrafoSeis{
+    grid-area: locParrafoSeis;
+}
+.locParrafoSiete{
+    grid-area: locParrafoSiete;
+}
+.subtitLocTres{
+    grid-area: subtitLocTres;
+}
+.locParrafoOcho{
+    grid-area: locParrafoOcho;
+}
+.locParrafoNueve{
+    grid-area: locParrafoNueve;
+}
+.locParrafoDiez{
+    grid-area: locParrafoDiez;
+}
+.locImg1{
+    grid-area: locImg1;
+    width: 100%;
+}
+.locImg2{
+    grid-area: locImg2;
+    width: 100%;
+}
+.locImg3{
+    grid-area: locImg3;
+    width: 100%;
+}
+.locImg4{
+    grid-area: locImg4;
+    width: 100%;
+}
+.locImg5{
+    grid-area: locImg5;
+    width: 100%;
+}
+.locImg6{
+    grid-area: locImg6;
+    width: 100%;
+}
+.mapaNuevaZelanda{
+    grid-area: mapa;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* * responsive peliculas - tablet */
+@media screen and (max-width:1024px){
+    
+    .locaciones{
+        grid-template-areas:
+    "tituloLocaciones	subtitLocUno"
+    "locParrafoUno	locParrafoUno"
+    "locImg2	locImg1"
+    "locParrafoDos	locParrafoDos"
+    "locParrafoTres	locParrafoTres"
+    "subtitLocDos	subtitLocDos"
+    "locParrafoCuatro	locParrafoCuatro"
+    "locParrafoCinco locParrafoCinco"
+    "locImg4	locImg3"
+    "locParrafoSeis	locParrafoSeis"
+    "locParrafoSiete	locParrafoSiete"
+    "subtitLocTres	subtitLocTres"
+    "locParrafoOcho	locParrafoOcho"
+    "locParrafoNueve	locParrafoNueve"
+    "locImg5 locImg6"
+    "locParrafoDiez	locParrafoDiez"
+    "mapa	mapa";
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    }
+}
+/* * responsive peliculas - mobile */
+
+@media screen and (max-width:600px){
+    main .musica iframe{
+        margin: 10px;
+    }
+    .locaciones{
+        grid-template-areas: 
+        "tituloLocaciones"
+        "subtitLocUno"
+        "locParrafoUno"
+        "locImg1"        
+        "locParrafoDos"
+        "locImg2"
+        "locParrafoTres"
+        "subtitLocDos"
+        "locParrafoCuatro"
+        "locImg3"
+        "locParrafoCinco"
+        "locImg4"
+        "locParrafoSeis"
+        "locParrafoSiete"
+        "subtitLocTres"
+        "locParrafoOcho"
+        "locImg5"
+        "locParrafoNueve"
+        "locImg6"
+        "locParrafoDiez"
+        "mapa";
+        grid-template-columns: 1fr;
+    }
+}
+
+
+ /* tarjetas cast (peliculas y novedades) */
+
+ .cast{
+     display:flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+ }
+
+ .cast div{
+     background-color: aliceblue;
+     padding: 5px;
+     text-align: center;
+     margin: 2px;
+ }
+
+ .cast div p{
+     color: #000000;
+ }
+
+.cast div a{
+    text-decoration: none;
+    font-family: 'Macondo', cursive;
+ }
+
+ .cast div a img{
+     height: 15px;
+     width: 15px;
+ }
+
+ /* estilos pagina novedades */
+
+.videos h1, h2{
+    text-align: center;
+    margin-left: 0%;
+}
+.video{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+/* * responsive novedades - tablet */
+@media screen and (max-width:1024px){
+    .novedadesHeader{
+        background-position: 50% 0px; 
+    }
+    .videos h1{
+        font-size: x-large;
+    }
+    .videos h2{
+        font-size: large;
+    }
+
+}
+
+/* * responsive novedades - mobile */
+
+@media screen and (max-width:600px){
+    .videos h1, h2{
+        text-align: center;
+    }
+    .videos h1{
+        font-size: large;
+    }
+    .videos h2{
+        font-size: small;
+    }
+    .mainNovedades{
+        margin: 1%;
+    }
+}
+
+/* estilos pagina Mundo Tolkien */
+/* esta se deja para trabajar con bootstrap */
+
+.razas div{
+    display: inline-block;
+    background-color: aliceblue;
+    border: #000 solid 1px;
+}
+
+.razas div .raza{
+    float: left;
+    width: 300px;
+    height: 300px;
+}
+.razas p{
+    color: #000;    
+}
+
+.mapas h2{
+    margin-top: 50px;
+}
+
+.mapas img{
+    height: 80%;
+    width: 80%;
+    margin: 3% 10% 10% 10%;
+}
+
+/* estilos pagina contacto */
+
+.tituloForm{
+    text-align: center;
+    margin: 0%;
+}
+.form{    
+    margin: 5% 10% 10% 10%;
+    display: grid;
+    grid-template-areas: 
+        "nombre email pais"
+        "consulta consulta adjuntos"
+        "botones botones botones";
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr 1fr;
+    background-color: #2A4F69;
+    padding: 1rem;
+    border: #000 solid 1px;
+    border-radius: 10px;    
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.form .nombre{
+ grid-area: nombre;
+}
+.form .email{
+grid-area: email;
+}
+.form .pais{
+grid-area: pais;
+}
+.form .consulta{
+grid-area: consulta;
+}
+.form .adjuntos{
+grid-area: adjuntos;
+border: solid 1px black;
+text-align: center;
+}
+.form .botones_form{
+grid-area: botones;
+}
+
+/* creo grid en el textarea para centrar el texto */
+.consulta{
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    align-items: center;
+}
+
+label, input, textarea, legend{
+    margin: 10px;
+    color: #CEB773;
+}
+.adjuntos input{
+    box-shadow: 2px 2px 5px 2px #000000;
+}
+
+.botones_form input{
+    color: #000;
+    padding: 3px;
+    box-shadow: 2px 2px 5px 2px #000000;
+}
+
+/* * responsive contacto - tablet */
+@media screen and (max-width:1024px){
+    .contactoHeader{
+        background-position: 30% -80px; 
+    }
+    .form{
+        grid-template-areas: 
+        "nombre email"
+        "pais adjuntos"
+        "consulta consulta"
+        "botones botones";
+    grid-template-columns: 0.5fr 1fr;   
+    margin: 1%;
+    padding: 0.3rem;
+    }
+}
+/* * responsive contacto - mobile */
+@media screen and (max-width:600px){
+    .contactoHeader{
+        background-position: 10% -80px; 
+    }
+    .tituloForm{
+        font-size: large;
+    }
+    .form{
+        grid-template-areas:
+            "nombre"
+            "email"
+            "pais"
+            "adjuntos"
+            "consulta"
+            "botones";
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 1fr 0.5fr;
+    margin: 0;
+    padding: 0;
+    box-shadow: 2px 2px 5px 2px #000000;    
+    }
+    input[type="file"] {
+        display: none;
+    }
+}
+
+/* estilos del footer */
+
+footer{
+    height: 150px;
+    background-image: url(/img/footer_img.png);
+    background-repeat: no-repeat;
+    background-position:right;
+    text-align: right;
+    line-height: 15px;
+}
+
+.footerP{
+    color: #CEB773;
+    padding-top: 90px;
+    margin: 10px;   
+}
+.parrafo2{
+    margin: 10px;
+}
+
+/* * responsive footer - mobile */
+
+@media screen and (max-width:600px){
+    footer{
+        text-align: center;
+    }
+}
