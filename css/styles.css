@@ -254,6 +254,14 @@ p{
     border-radius: 10px;
 }
 
+/* animación de zoom en las imagenes*/
+img{
+    transition: 0.5s;
+}
+img:hover{
+    transform: scale(1.2);    
+}
+
 /* * responsive home - tablet */
 
 @media screen and (max-width:1024px){
