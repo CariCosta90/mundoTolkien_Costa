@@ -1,32 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- link a bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- link a mi css -->
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>Mundo Tolkien - Home</title>
 
-    <!-- link a fuente de títulos -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
-
-    <!-- link al css -->
-    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="indexHeader"> 
-        <nav>
-            <ul>
-                <li class="pagActual"><a href="../index.html">Home</a></li>
-                <li><a href="pages/peliculas.html">Peliculas</a></li>
-                <li><a href="pages/novedades.html">Novedades</a></li>
-                <li><a href="pages/mundo_tolkien.html">Mundo Tolkien</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>       
+
+          <nav class="navbar navbar-expand-lg nav-tamaño">
+            <div class="container-fluid d-flex justify-content-end">
+              
+              <button class="navbar-toggler boton-style" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse posicion-nav" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  
+                  <li class="nav-item pagActual">
+                    <a class="nav-link" href="../index.html">Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link nav-style" href="pages/peliculas.html">Peliculas</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link nav-style" href="pages/novedades.html">Novedades</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link nav-style" href="pages/novedades.html">Mundo Tolkien</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link nav-style" href="pages/novedades.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         
     </header>
 
@@ -134,6 +156,10 @@
     <footer>
         <p class="footerP">Created by Carina Costa <br>© Todos los derechos reservados </p>       
     </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
     
 </body>
 </html>
