@@ -246,12 +246,12 @@ p{
 
 /* animación de zoom en las imagenes*/
 /* TODO rehacer animacion para solo imagenes de párrafo */
-/* img{
+.imgAnimation{
     transition: 0.5s;
 }
-img:hover{
+.imgAnimation:hover{
     transform: scale(1.2);    
-} */
+}
 
 /* * responsive home - tablet */
 
