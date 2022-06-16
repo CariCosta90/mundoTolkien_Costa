@@ -245,7 +245,6 @@ p{
 }
 
 /* animación de zoom en las imagenes*/
-
 .imgAnimation{
     transition: 0.5s;
 }
