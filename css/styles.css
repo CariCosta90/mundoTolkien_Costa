@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
 /* importación de fuente de parrafos */
 @import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap');
-/* importación fuente de citas */
-@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+/* variable 2 para cita */
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+/* variable 3 para cita */
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 /* reset */
 
@@ -106,7 +108,7 @@ body{
      background-image: url(../img/map_4.jpg);
      background-repeat: no-repeat;
      background-attachment: fixed;
-     background-position: 0 0;
+     background-position: 50% 0;
 }
 main{
     background-color: rgba(42, 79, 105,0.85);
@@ -118,7 +120,7 @@ h1{
     margin-left: 8%;
     font-size: 38px;
     font-family: 'Macondo', cursive;
-    color: #CEB773;    
+    color: #eccd71;    
     text-shadow: 3px 5px 2px #000000;    
 }
 h2{
@@ -126,22 +128,22 @@ h2{
     margin-left: 8%;
     font-size: 30px;
     font-family: 'Macondo', cursive;
-    color: #CEB773;
+    color: #eccd71;
     text-shadow: 3px 5px 2px #000000;
 }
 h3{
     padding: 10px;   
     font-size: 20px;
     font-family: 'Macondo', cursive;
-    color: #CEB773;
+    color: #eccd71;
     text-shadow: 3px 5px 2px #000000;
 }
 p{  
-    color: #CEB773;
+    color: #eccd71; 
     font-family: 'Poly', serif;
-    font-size: 16px;
-    margin: 0px 30px 0px 30px;
-    line-height: 25px;
+    font-size: 1.2rem;
+    margin: 1rem 4rem 1rem 4rem;
+    line-height: 2rem;
 }
 
 /* ! inician estilos especificos del home*/
@@ -180,23 +182,26 @@ p{
 .citaCompleta{
     grid-area: cita;
     background-color: rgba(37, 67, 89, 0.8);
-    text-align: right;
+    text-align: center;
     padding: 5px;
-    box-shadow: 5px 5px 15px 5px black;
+    box-shadow: 5px 5px 15px 5px #173143;
 }
 .cita{
     display: inline-block;        
     color: lightgrey;
-    font-family: 'Babylonica', cursive;
+    font-family: 'Tangerine', cursive;
     color: white;
-    font-size: 30px;
+    font-size: 2.5rem;    
+    margin: 1rem 4rem 1rem 4rem;
+    line-height: 1rem;
 }
 
 .referencia{
-    display: inline-block;    
+    display: inline-block; 
+    margin-top: 2rem;   
     margin-left: 5%;
     color: white;
-    font-size: 20px;
+    font-size: 1.5rem;
     text-align: right;
 }
 .contenedor h2{
@@ -217,11 +222,12 @@ p{
   .books{
     display: flex;
     flex-wrap: no-wrap; 
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .libro{
+    width: 360px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin: 20px;
@@ -231,15 +237,16 @@ p{
 .bookP{
     color: #000000;
     font-family: 'Poly', cursive;
+    margin: 0.8rem;
+    font-size: 1rem;
 }
 .bookA{
-    text-align: center;
+    text-align: center;    
     color: #CEB773;
     text-decoration: none;
     font-family: 'Macondo', cursive;
     font-size: larger;
     background-color: #2A4F69;
-    margin: auto;
     padding: 5px;
     border-radius: 10px;
 }
@@ -266,7 +273,7 @@ p{
                                 "parrafo2 parrafo2"
                                 "img2 img2"
                                 "parrafo3 parrafo3";  
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;        
     }
  /* ajuste de lista de libros */
 
@@ -275,18 +282,37 @@ p{
         align-items: center;
         margin: 40px;
       }
-
-
+/* ajuste de cita */
+   
+    .cita{
+        font-size: 1.5rem;    
+        margin: 1rem 2rem 1rem 2rem;
+        line-height: 0.3rem;
+        
+    }
+    
+    .referencia{
+        font-size: 1rem;
+    }
 }
 
 /* * responsive home - mobile */
 
 @media screen and (max-width:600px){
+.contenedor{
+    margin: 2px;
+}
+ .citaCompleta{
+        padding: 2px;
+    }
  .cita{
-     font-size: 1.3rem;
+    margin: 0px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-family: 'Marck Script', cursive;    
  }
  .referencia{
-     font-size: 1rem;
+     font-size: 0.8rem;
  }
  .indexHeader{
     background-position: 80% -150px;  
@@ -301,9 +327,16 @@ p{
     .nav-style{
     padding: 0px;      
     }
-
-
 } 
+
+/* * responsive p todos -mobile */
+@media screen and (max-width:600px){
+    p{  
+        font-size: 1rem;
+        margin: 1rem 2rem 1rem 2rem;
+        line-height: 1.8rem;
+    }
+}
 
 /* estilos especificos de página peliculas */
 
@@ -480,13 +513,15 @@ main .musica iframe{
 
  /* tarjetas cast (peliculas y novedades) */
 
- .cast{
+ .cast{    
      display:flex;
      justify-content: space-around;
      flex-wrap: wrap;
+     
  }
 
  .cast div{
+    width: 265px;
      background-color: aliceblue;
      padding: 5px;
      text-align: center;
@@ -551,7 +586,7 @@ main .musica iframe{
 }
 
 /* estilos pagina Mundo Tolkien */
-/* esta se deja para trabajar con bootstrap */
+/* trabajado con bootstrap */
 
 .container{
     margin: 0px;
@@ -574,7 +609,6 @@ main .musica iframe{
 }
 .img-card{
     border: #000 solid 1px;
-    /* margin-top: 20px; */
     border-radius: 30px 0px 30px 0px;
     height: 100%;
     width: 100%;
@@ -721,13 +755,13 @@ footer{
     background-image: url(/img/footer_img.png);
     background-repeat: no-repeat;
     background-position:right;
-    text-align: right;
-    line-height: 15px;
+    text-align: right;    
 }
 
 .footerP{
     color: #CEB773;
     padding-top: 90px;
+    line-height: 10px;
  }
 .parrafo2{
     margin: 10px;
@@ -737,6 +771,10 @@ footer{
 
 @media screen and (max-width:600px){
     footer{
+        margin-top: 1rem;
         text-align: center;
+    }
+    .footerP{
+        padding-top: 6.1rem;
     }
 }
