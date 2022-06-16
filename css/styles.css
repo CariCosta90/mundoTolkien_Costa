@@ -752,7 +752,7 @@ label, input, textarea, legend{
 
 footer{
     height: 150px;
-    background-image: url(/img/footer_img.png);
+    background-image: url(../img/footer_img.png);
     background-repeat: no-repeat;
     background-position:right;
     text-align: right;    
