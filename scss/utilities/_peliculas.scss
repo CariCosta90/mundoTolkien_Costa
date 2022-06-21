@@ -1,0 +1,180 @@
+/* estilos especificos de página peliculas */
+
+.peliculasHeader{
+    background-image: url(../img/banner_peliculas.jpg);
+    @include header;
+    background-position: 50%; 
+}
+
+main{
+    .musica{
+        @include flexMultimedia;
+        iframe{
+            margin: 10px;
+            max-width: 30rem;
+            min-width: 15rem;
+        }
+    }
+    .locaciones{
+        display: grid;
+        grid-template-areas:
+        "tituloLocaciones	tituloLocaciones	tituloLocaciones"
+        "subtitLocUno	subtitLocUno	subtitLocUno"
+        "locParrafoUno	locParrafoUno	locImg1"
+        "locImg2	locParrafoDos	locImg1"
+        "locImg2	locParrafoTres	locParrafoTres"
+        "subtitLocDos	subtitLocDos	subtitLocDos"
+        "locParrafoCuatro	locParrafoCuatro	locParrafoCuatro"
+        "locImg4	locParrafoCinco	locImg3"
+        "locParrafoSeis	locParrafoSeis	locParrafoSeis"
+        "locParrafoSiete	locParrafoSiete	locParrafoSiete"
+        "subtitLocTres	subtitLocTres	subtitLocTres"
+        "locParrafoOcho	locParrafoOcho	locParrafoOcho"
+        "locParrafoNueve	locParrafoNueve	locImg5"
+        "locImg6	locParrafoDiez	locParrafoDiez"
+        "mapa	mapa	mapa";
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        padding: 10px;
+        margin: 30px;
+        .tituloLocaciones{
+            grid-area: tituloLocaciones;
+        }
+        .subtitLocUno{
+            grid-area: subtitLocUno;
+        }
+        .locParrafoUno{
+            grid-area: locParrafoUno;
+        }
+        .locParrafoDos{
+            grid-area: locParrafoDos;
+        }
+        .locParrafoTres{
+            grid-area: locParrafoTres;
+        }
+        .subtitLocDos{
+            grid-area: subtitLocDos;
+        }
+        .locParrafoCuatro{
+            grid-area: locParrafoCuatro;
+        }
+        .locParrafoCinco{
+            grid-area: locParrafoCinco;
+        }
+        .locParrafoSeis{
+            grid-area: locParrafoSeis;
+        }
+        .locParrafoSiete{
+            grid-area: locParrafoSiete;
+        }
+        .subtitLocTres{
+            grid-area: subtitLocTres;
+        }
+        .locParrafoOcho{
+            grid-area: locParrafoOcho;
+        }
+        .locParrafoNueve{
+            grid-area: locParrafoNueve;
+        }
+        .locParrafoDiez{
+            grid-area: locParrafoDiez;
+        }
+        .locImg1{
+            grid-area: locImg1;
+            width: 100%;
+        }
+        .locImg2{
+            grid-area: locImg2;
+            width: 100%;
+        }
+        .locImg3{
+            grid-area: locImg3;
+            width: 100%;
+        }
+        .locImg4{
+            grid-area: locImg4;
+            width: 100%;
+        }
+        .locImg5{
+            grid-area: locImg5;
+            width: 100%;
+        }
+        .locImg6{
+            grid-area: locImg6;
+            width: 100%;
+        }
+        .mapaNuevaZelanda{
+            grid-area: mapa;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: $shadow-uno;
+            border-radius:1rem;
+        }
+    }
+}
+/* * responsive peliculas - tablet */
+@media screen and (max-width:1024px){
+main{
+    .locaciones{
+        grid-template-areas:
+    "tituloLocaciones	subtitLocUno"
+    "locParrafoUno	locParrafoUno"
+    "locImg2	locImg1"
+    "locParrafoDos	locParrafoDos"
+    "locParrafoTres	locParrafoTres"
+    "subtitLocDos	subtitLocDos"
+    "locParrafoCuatro	locParrafoCuatro"
+    "locParrafoCinco locParrafoCinco"
+    "locImg4	locImg3"
+    "locParrafoSeis	locParrafoSeis"
+    "locParrafoSiete	locParrafoSiete"
+    "subtitLocTres	subtitLocTres"
+    "locParrafoOcho	locParrafoOcho"
+    "locParrafoNueve	locParrafoNueve"
+    "locImg5 locImg6"
+    "locParrafoDiez	locParrafoDiez"
+    "mapa	mapa";
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin: 10px;
+    }
+}
+}
+/* * responsive peliculas - mobile */
+@media screen and (max-width:600px){
+    main {
+        .musica{
+            iframe{
+                margin: 10px;
+            }
+        }
+        .locaciones{
+            grid-template-areas: 
+            "tituloLocaciones"
+            "subtitLocUno"
+            "locParrafoUno"
+            "locImg1"        
+            "locParrafoDos"
+            "locImg2"
+            "locParrafoTres"
+            "subtitLocDos"
+            "locParrafoCuatro"
+            "locImg3"
+            "locParrafoCinco"
+            "locImg4"
+            "locParrafoSeis"
+            "locParrafoSiete"
+            "subtitLocTres"
+            "locParrafoOcho"
+            "locImg5"
+            "locParrafoNueve"
+            "locImg6"
+            "locParrafoDiez"
+            "mapa";
+            grid-template-columns: 1fr;
+        }
+    } 
+}
+
+// la sección de cast se da estilo en styles.scss dado que se usa en mas de una page

@@ -1,0 +1,20 @@
+
+@mixin header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@mixin titulos{
+    padding: 10px;
+    font-family: $letra-macondo;
+    color:$letra-dorado;
+    text-shadow: 3px 5px 2px #000000;
+    text-align: center;
+}
+
+@mixin flexMultimedia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

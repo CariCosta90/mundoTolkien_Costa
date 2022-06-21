@@ -1,0 +1,157 @@
+// import internos
+@import "utilities/variables";
+@import "utilities/mixin";
+@import "utilities/extend";
+// import externos
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+// estilos generales
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* estilos generales de nav bar y header*/
+header{
+    height: 300px;
+    .nav-tamaño{
+        height: 280px;
+        align-items: end; 
+        div{
+            .boton-style{
+                background-color: $color-azul-solido;
+            }
+            .posicion-nav{
+                justify-content: end;
+                ul{
+                    li{
+                        @extend %botones;
+                        .nav-style{                            
+                            color: $letra-dorado;
+                            font-family: $letra-macondo;  
+                        }
+                    }
+                        .pagActual{
+                        background-color: rgba(42, 79, 105, 0.5);
+                        a{
+                            color: rgba(206, 183, 115, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* responsive nav todos - mobile */
+@media screen and (max-width:991px) {
+    .nav-style{
+    padding: 0px;      
+    }
+} 
+/* responsive p todos -mobile */
+@media screen and (max-width:600px){
+    p{  
+        font-size: 1rem;
+        margin: 1rem 2rem 1rem 2rem;
+        line-height: 1.8rem;
+    }
+}
+/*estilos generales del body*/
+
+body{
+    background-image: url(../img/map_4.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 0;
+    main{
+        margin: 2% 5% 2% 5%;
+        padding: 5px;
+        background-color: $color-azul-traslucido;
+        h1{
+            @include titulos;
+        }
+        h2{
+            @include titulos;
+        }
+        h3{
+            @include titulos;
+        }
+        p{
+            color:$letra-dorado;
+            font-family: $letra-poly;
+            font-size: 1.2rem;
+            margin: 1rem 4rem 1rem 4rem;
+            line-height: 2rem;
+        }
+        /* animación de zoom en las imagenes*/
+        .imgAnimation{
+        transition: 0.5s;
+        }
+        .imgAnimation:hover{
+            transform: scale(1.2);    
+        }
+        /* tarjetas cast (peliculas y novedades) */
+        .cast{
+            @include flexMultimedia;
+            div{
+                width: 265px;
+                background-color: aliceblue;
+                padding: 5px;
+                text-align: center;
+                margin: 2px;
+                p{
+                    color: black;
+                    font-family: $letra-macondo;
+                }
+                a{
+                    text-decoration: none;
+                    font-family: $letra-macondo;
+                    img{
+                        height: 1rem;
+                        width: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+/*estilos generales del footer*/
+
+footer{
+    height: 150px;
+    background-image: url("../img/footer_img.png");
+    background-repeat: no-repeat;
+    background-position:right;
+    text-align: right;   
+    .footerP{
+        color: $letra-dorado;
+        padding-top: 90px;
+        line-height: 10px;
+        margin: 1rem;
+    }
+    .parrafo2{
+        color: $letra-dorado;
+        margin: 1rem;
+    }
+}
+/*responsive footer - mobile*/
+@media screen and (max-width:600px){
+    footer{
+        margin-top: 1rem;
+        text-align: center;
+        .footerP{
+            padding-top: 6.1rem;
+        }
+    }
+}
+
+@import "utilities/home";
+@import "utilities/peliculas";
+@import "utilities/novedades";
+@import "utilities/mundoTolkien";
+@import "utilities/contacto";

@@ -1,0 +1,65 @@
+/* estilos pagina Mundo Tolkien */
+/* trabajado con bootstrap */
+/* estilo del header de pag Mundo Tolkien */
+.mTolkienHeader{
+    background-image: url("../img/banner_razas.jpg");
+    @include header;
+    background-position: 50% -300px; 
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    div{
+        .card-style{
+            background-color: transparent;   
+            position: relative;
+            :hover .card-text{
+                opacity: 1;
+                height: 100%;
+            }
+            .img-card{
+                border: #000 solid 1px;
+                border-radius: 30px 0px 30px 0px;
+                height: 100%;
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+                box-shadow: $shadow-uno;
+            }
+            .card-title{
+                font-family: $letra-macondo;
+                font-size: 2rem;
+                text-align: center;
+                background-color: $color-azul-traslucido;
+                padding: 1rem;
+            }
+            .card-text{
+                font-size: 1rem;
+                position: absolute;
+                height: 0;
+                top: 0;
+                opacity: 0;
+                padding: 18px 8%;
+                background-color: $color-azul-solido;
+                overflow-y: scroll;
+                transition: 0.8s ease;
+            }
+            .mapas{
+                h2{
+                    margin-top: 2.5rem;
+                }
+                img{
+                    height: 80%;
+                    width: 80%;
+                    margin: 3% 10% 10% 10%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    .mTolkienHeader{
+        background-position: 50% -200px; 
+    } 
+}

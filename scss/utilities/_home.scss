@@ -1,0 +1,177 @@
+/* estilos especificos del home*/
+.indexHeader{
+    background-image: url(../img/home_banner.jpg);
+    @include header;
+    background-position: 100% -150px;  
+}
+main{
+    .contenedor{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "parrafo1 img1"
+        "parrafo4 parrafo4"
+        "cita cita"
+        "titulo2 titulo2"
+        "parrafo2 img2"
+        "parrafo3 parrafo3";
+        gap: 2rem;
+        margin: 2rem;
+        justify-items:center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        h1{
+            grid-area: titulo;
+        }
+        .parrafoUno{
+            grid-area: parrafo1;
+        }
+        .parrafoCuatro{
+            grid-area: parrafo4;
+        }
+        .fellowship{
+            width: 100%;
+            grid-area: img1;
+        }
+        .citaCompleta{
+            grid-area: cita;
+            background-color: $color-azul-solido;
+            text-align: center;
+            padding: 5px;
+            box-shadow: $shadow-uno;
+            div .cita{
+                display: inline-block;        
+                color: lightgrey;
+                font-family: $letra-tangerine;
+                color: white;
+                font-size: 2.5rem;    
+                margin: 1rem 4rem 1rem 4rem;
+                line-height: 1rem;
+            }
+            div .referencia{
+                display: inline-block; 
+                margin-top: 2rem;   
+                margin-left: 5%;
+                color: white;
+                font-size: 1.5rem;
+                text-align: right;
+            }
+        }
+        h2{
+            grid-area: titulo2;
+        }
+        .parrafoDos{
+            grid-area: parrafo2;
+        }
+        .parrafoTres{
+            grid-area: parrafo3;
+        }
+        .retratoAutor{
+            grid-area: img2;
+            width: 100%;
+        }
+    }
+    .books{
+        @include flexMultimedia;
+        .libro{        
+            width: 360px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px;
+            padding: 10px;
+            background-color: floralwhite;                
+            .bookP{
+                color: #000000;
+                font-family: $letra-poly;
+                margin: 0.8rem;
+                font-size: 1rem;
+            }
+            .bookA{
+                @extend %botones;
+                text-align: center;    
+                color: $letra-dorado;
+                text-decoration: none;
+                font-family: $letra-macondo;
+                font-size: larger;            
+            }
+        }
+    }
+}
+
+
+/* * responsive home - tablet */
+
+@media screen and (max-width:1024px){
+main{    
+    .contenedor{
+        .cita{
+            font-size: 1.5rem;    
+            margin: 1rem 2rem 1rem 2rem;
+            line-height: 0.3rem;            
+        }        
+        .referencia{
+            font-size: 1rem;
+        }
+        display: grid;
+        grid-template-areas:    "titulo"
+                                "parrafo1"
+                                "img1"
+                                "parrafo4"
+                                "cita"
+                                "titulo2" 
+                                "parrafo2"
+                                "img2"
+                                "parrafo3";  
+        grid-template-columns: 1fr;        
+    }
+    .books{
+        flex-direction: column;
+        align-items: center;
+        margin: 40px;
+      }
+}
+}
+/* * responsive home - mobile */
+@media screen and (max-width:600px){
+.indexHeader{
+    background-position: 80% -100px;
+}
+
+main{   
+    p{
+        margin: 1rem !important;
+    } 
+    .contenedor{
+        margin: 2px;
+        .citaCompleta{
+            padding: 2px;
+        }
+        .cita{
+            margin: 0px;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            font-family: 'Marck Script', cursive;    
+        }
+        .referencia{
+            font-size: 0.8rem;
+        }
+        .fellowship{
+            width:70%;
+        }
+    }
+    .books{
+        margin:1rem;
+        .libro{
+            width: 80%;
+        }
+    }
+}
+}
+
+
+   
+
+
+

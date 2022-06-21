@@ -1,0 +1,10 @@
+%botones{
+    background-color: $color-azul-solido; 
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: $shadow-dos; 
+    margin: 5px;    
+    :hover{
+        color:black;
+    }  
+}

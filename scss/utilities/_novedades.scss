@@ -1,0 +1,40 @@
+/*estilo pagina novedades*/
+.novedadesHeader{
+    background-image: url(../img/banner_novedades_2.jpg);
+    @include header;
+    background-position: 50% -20px; 
+}
+main{
+    .video{
+        @include flexMultimedia;
+        margin: 0.5rem;        
+    }
+}
+/* * responsive novedades - tablet */
+@media screen and (max-width:1024px){
+    .novedadesHeader{
+        background-position: 50% 0px; 
+    }
+    main{
+        .videos h1{
+            font-size: x-large;
+        }
+        .videos h2{
+            font-size: large;
+        }
+    }    
+}
+/* * responsive novedades - mobile */
+
+@media screen and (max-width:600px){
+    main{
+        .video{            
+            h1{
+                font-size: large;
+            }
+            h2{
+                font-size: small;
+            }            
+        }
+    }
+}

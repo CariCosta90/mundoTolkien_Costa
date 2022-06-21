@@ -1,0 +1,123 @@
+/* estilos pagina contacto */
+.contactoHeader{
+    background-image: url("../img/banner_contacto_2.JPG");
+    @include header;
+    background-position: 50% -120px;
+}
+main{
+    .tituloForm{
+        text-align: center;
+        margin: 0%;
+    }
+    form{
+        .form{
+            margin: 5% 10% 10% 10%;
+            display: grid;
+            grid-template-areas: 
+                "nombre email pais"
+                "consulta consulta adjuntos"
+                "botones botones botones";
+            align-items: center;
+            justify-items: center;
+            gap: 1rem;
+            grid-template-columns: 2fr 2fr 1fr;
+            background-image: url(../img/map-white.jpg);
+            padding: 1rem;
+            border: #000 solid 1px;
+            border-radius: 10px;    
+            box-shadow: $shadow-uno;
+            .nombre{
+                grid-area: nombre;
+               }
+            .email{
+               grid-area: email;
+               }
+            .pais{
+               grid-area: pais;
+               }
+            .consulta{
+               grid-area: consulta;
+               display: grid;
+               grid-template-columns: 0.5fr 1.5fr;
+               align-items: center;
+               }
+            .adjunto{
+                grid-area:adjuntos;
+                // position:relative;
+                @extend %botones;
+                .texto{
+                    font-size: 1rem;
+                    margin: 0px;
+                    font-family: $letra-macondo;
+                    text-align: center;
+                }
+                .btn_enviar{
+                    position:absolute;
+                    opacity: 0;
+                }
+            }
+            .botones_form{
+               grid-area: botones;
+               input{
+                    color: $letra-dorado;
+                    font-family: $letra-macondo;
+               }
+               .btn{
+                @extend %botones;
+                }
+            }
+            label, input, textarea, legend{
+                margin: 10px;
+                color: $color-azul-solido;
+                font-family: $letra-macondo;
+                font-size: 1.3rem;
+            }            
+        }
+    }
+}
+/*Reponsive contacto - tablet*/
+@media screen and (max-width:1024px){
+    .contactoHeader{
+        background-position: 30% -80px; 
+    }
+    main{
+        form{
+            .form{            
+                grid-template-areas: 
+                "nombre email "
+                "pais adjuntos"
+                "consulta consulta"
+                "botones botones";
+                grid-template-columns: 1fr 1fr;
+                margin: 1%;
+                padding: 0.3rem;
+            }
+        }
+    }
+}
+
+/*Responsive contacto - mobile*/
+@media screen and (max-width:600px){
+    .contactoHeader{
+        background-position: 10% -80px; 
+    }
+    main{
+        form{
+            .form{
+                grid-template-areas:
+                    "nombre"
+                    "email"
+                    "pais"
+                    "adjuntos"
+                    "consulta"
+                    "botones";
+            justify-items: center;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 1fr 0.5fr;
+            margin: 0;
+            padding: 0;   
+            }
+        }
+    }
+}
+
