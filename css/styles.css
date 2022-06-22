@@ -435,7 +435,7 @@ main div .card-style {
 
 /* estilos pagina contacto */
 .contactoHeader {
-  background-image: url("../../img/banner_contacto_2.jpg");
+  background-image: url(../../img/banner_contacto_2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
