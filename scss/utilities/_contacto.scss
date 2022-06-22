@@ -47,13 +47,15 @@ main{
                 @extend %botones;
                 .texto{
                     font-size: 1rem;
-                    margin: 0px;
+                    margin: 0px !important;
                     font-family: $letra-macondo;
                     text-align: center;
+                    padding: 0.1rem;
                 }
                 .btn_enviar{
                     position:absolute;
                     opacity: 0;
+                    width: 30px;
                 }
             }
             .botones_form{

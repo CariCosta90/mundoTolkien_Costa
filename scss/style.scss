@@ -33,7 +33,10 @@ header{
                         @extend %botones;
                         .nav-style{                            
                             color: $letra-dorado;
-                            font-family: $letra-macondo;  
+                            font-family: $letra-macondo;
+                            &:hover{
+                                color: black;
+                            }  
                         }
                     }
                         .pagActual{

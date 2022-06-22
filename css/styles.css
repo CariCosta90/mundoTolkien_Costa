@@ -9,7 +9,7 @@ header .nav-tamaño div .posicion-nav ul li, main .books .libro .bookA, main for
   border-radius: 6px;
   box-shadow: 3px 7px 8px 0px rgba(114, 90, 90, 0.8);
   margin: 5px; }
-  header .nav-tamaño div .posicion-nav ul li :hover, main .books .libro .bookA :hover, main form .form .adjunto :hover, main form .form .botones_form .btn :hover {
+  header .nav-tamaño div .posicion-nav ul li:hover, main .books .libro .bookA:hover, main form .form .adjunto:hover, main form .form .botones_form .btn:hover {
     color: black; }
 
 /* reset */
@@ -31,6 +31,8 @@ header {
       header .nav-tamaño div .posicion-nav ul li .nav-style {
         color: #eccd71;
         font-family: "Macondo", cursive; }
+        header .nav-tamaño div .posicion-nav ul li .nav-style:hover {
+          color: black; }
       header .nav-tamaño div .posicion-nav ul .pagActual {
         background-color: rgba(42, 79, 105, 0.5); }
         header .nav-tamaño div .posicion-nav ul .pagActual a {
@@ -471,12 +473,14 @@ main form .form {
     grid-area: adjuntos; }
     main form .form .adjunto .texto {
       font-size: 1rem;
-      margin: 0px;
+      margin: 0px !important;
       font-family: "Macondo", cursive;
-      text-align: center; }
+      text-align: center;
+      padding: 0.1rem; }
     main form .form .adjunto .btn_enviar {
       position: absolute;
-      opacity: 0; }
+      opacity: 0;
+      width: 30px; }
   main form .form .botones_form {
     grid-area: botones; }
     main form .form .botones_form input {
