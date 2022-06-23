@@ -2,11 +2,8 @@
 /* trabajado con bootstrap */
 /* estilo del header de pag Mundo Tolkien */
 .mTolkienHeader{
-    background-image: url("../img/banner_razas.jpg");
-    @include header;
-    background-position: 50% -300px; 
-    margin: 0;
-    padding: 0;
+    background-image: url("../../img/banner_razas.png");
+    @include header(50%,0);
 }
 
 main{
@@ -32,13 +29,16 @@ main{
                 font-size: 2rem;
                 text-align: center;
                 background-color: $color-azul-traslucido;
-                padding: 1rem;
+                padding: 0.2rem;
+                margin-top: 0;              
+                
             }
             .card-text{
                 font-size: 1rem;
                 position: absolute;
                 height: 0;
                 top: 0;
+                margin-top: 0;
                 opacity: 0;
                 padding: 18px 8%;
                 background-color: $color-azul-solido;
@@ -50,16 +50,17 @@ main{
                     margin-top: 2.5rem;
                 }
                 img{
-                    height: 80%;
-                    width: 80%;
-                    margin: 3% 10% 10% 10%;
+                    height: 50%;
+                    width: 50%;
+                    margin: 0;
+                    padding: 0;
                 }
             }
         }
     }
 }
-@media screen and (max-width:1024px){
+@media screen and (max-width:600px){
     .mTolkienHeader{
-        background-position: 50% -200px; 
+        background-position-x: 25%; 
     } 
 }

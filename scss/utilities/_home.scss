@@ -1,8 +1,7 @@
 /* estilos especificos del home*/
 .indexHeader{
-    background-image: url(../img/home_banner.jpg);
-    @include header;
-    background-position: 100% -150px;  
+    background-image: url(../../img/home_banner.jpg);
+    @include header(100%,0);
 }
 main{
     .contenedor{
@@ -136,7 +135,7 @@ main{
 /* * responsive home - mobile */
 @media screen and (max-width:600px){
 .indexHeader{
-    background-position: 80% -100px;
+    background-position-x: 50%;
 }
 
 main{   

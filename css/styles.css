@@ -20,7 +20,8 @@ header .nav-tamaño div .posicion-nav ul li, main .books .libro .bookA, main for
 
 /* estilos generales de nav bar y header*/
 header {
-  height: 300px; }
+  height: 300px;
+  background-color: #212F3D; }
   header .nav-tamaño {
     height: 280px;
     align-items: end; }
@@ -55,7 +56,7 @@ body {
   background-image: url(../img/map_4.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 50% 0; }
+  background-position: 0 0; }
   body main {
     margin: 2% 5% 2% 5%;
     padding: 5px;
@@ -119,9 +120,9 @@ footer {
   text-align: right; }
   footer .footerP {
     color: #eccd71;
-    padding-top: 90px;
+    padding-top: 6rem;
     line-height: 10px;
-    margin: 1rem; }
+    margin: 0.5rem 1rem; }
   footer .parrafo2 {
     color: #eccd71;
     margin: 1rem; }
@@ -132,15 +133,16 @@ footer {
     margin-top: 1rem;
     text-align: center; }
     footer .footerP {
-      padding-top: 6.1rem; } }
+      padding-top: 6rem; } }
 
 /* estilos especificos del home*/
 .indexHeader {
-  background-image: url(../img/home_banner.jpg);
+  background-image: url(../../img/home_banner.jpg);
+  background-position-x: 100%;
+  background-position-y: 0;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 100% -150px; }
+  background-size: auto auto;
+  background-attachment: fixed; }
 
 main .contenedor {
   display: grid;
@@ -235,7 +237,7 @@ main .books {
 /* * responsive home - mobile */
 @media screen and (max-width: 600px) {
   .indexHeader {
-    background-position: 80% -100px; }
+    background-position-x: 50%; }
   main p {
     margin: 1rem !important; }
   main .contenedor {
@@ -258,11 +260,12 @@ main .books {
 
 /* estilos especificos de página peliculas */
 .peliculasHeader {
-  background-image: url(../img/banner_peliculas.jpg);
+  background-image: url(../../img/banner_peliculas.png);
+  background-position-x: 50%;
+  background-position-y: 0px;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 50%; }
+  background-size: auto auto;
+  background-attachment: fixed; }
 
 main .musica {
   display: flex;
@@ -352,11 +355,12 @@ main .locaciones {
 
 /*estilo pagina novedades*/
 .novedadesHeader {
-  background-image: url(../img/banner_novedades_2.jpg);
+  background-image: url(../../img/banner_novedades.png);
+  background-position-x: 50%;
+  background-position-y: 0;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 50% -20px; }
+  background-size: auto auto;
+  background-attachment: fixed; }
 
 main .video {
   display: flex;
@@ -384,13 +388,12 @@ main .video {
 /* trabajado con bootstrap */
 /* estilo del header de pag Mundo Tolkien */
 .mTolkienHeader {
-  background-image: url("../img/banner_razas.jpg");
+  background-image: url("../../img/banner_razas.png");
+  background-position-x: 50%;
+  background-position-y: 0;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 50% -300px;
-  margin: 0;
-  padding: 0; }
+  background-size: auto auto;
+  background-attachment: fixed; }
 
 main div .card-style {
   background-color: transparent;
@@ -411,12 +414,14 @@ main div .card-style {
     font-size: 2rem;
     text-align: center;
     background-color: rgba(42, 79, 105, 0.85);
-    padding: 1rem; }
+    padding: 0.2rem;
+    margin-top: 0; }
   main div .card-style .card-text {
     font-size: 1rem;
     position: absolute;
     height: 0;
     top: 0;
+    margin-top: 0;
     opacity: 0;
     padding: 18px 8%;
     background-color: #2A4F69;
@@ -425,21 +430,23 @@ main div .card-style {
   main div .card-style .mapas h2 {
     margin-top: 2.5rem; }
   main div .card-style .mapas img {
-    height: 80%;
-    width: 80%;
-    margin: 3% 10% 10% 10%; }
+    height: 50%;
+    width: 50%;
+    margin: 0;
+    padding: 0; }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
   .mTolkienHeader {
-    background-position: 50% -200px; } }
+    background-position-x: 25%; } }
 
 /* estilos pagina contacto */
 .contactoHeader {
-  background-image: url(../img/banner_contacto_2.jpg);
+  background-image: url(../../img/banner_contacto_2.png);
+  background-position-x: 0;
+  background-position-y: 0;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 50% -120px; }
+  background-size: auto auto;
+  background-attachment: fixed; }
 
 main .tituloForm {
   text-align: center;
@@ -494,8 +501,6 @@ main form .form {
 
 /*Reponsive contacto - tablet*/
 @media screen and (max-width: 1024px) {
-  .contactoHeader {
-    background-position: 30% -80px; }
   main form .form {
     grid-template-areas: "nombre email " "pais adjuntos" "consulta consulta" "botones botones";
     grid-template-columns: 1fr 1fr;
@@ -505,7 +510,7 @@ main form .form {
 /*Responsive contacto - mobile*/
 @media screen and (max-width: 600px) {
   .contactoHeader {
-    background-position: 10% -80px; }
+    background-position-x: -20rem; }
   main form .form {
     grid-template-areas: "nombre" "email" "pais" "adjuntos" "consulta" "botones";
     justify-items: center;

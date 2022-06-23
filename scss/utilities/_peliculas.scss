@@ -1,9 +1,9 @@
 /* estilos especificos de página peliculas */
 
 .peliculasHeader{
-    background-image: url(../img/banner_peliculas.jpg);
-    @include header;
-    background-position: 50%; 
+    background-image: url(../../img/banner_peliculas.png);
+    @include header(50%, 0px);
+ 
 }
 
 main{

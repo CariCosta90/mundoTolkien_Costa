@@ -1,9 +1,12 @@
 
-@mixin header{
+@mixin header($horizontal, $vertical){
+    background-position-x: $horizontal;
+    background-position-y: $vertical;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto auto;
     background-attachment: fixed;
 }
+
 
 @mixin titulos{
     padding: 10px;

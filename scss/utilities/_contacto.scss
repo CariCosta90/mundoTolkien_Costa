@@ -1,8 +1,8 @@
 /* estilos pagina contacto */
 .contactoHeader{
-    background-image: url(../img/banner_contacto_2.jpg);
-    @include header;
-    background-position: 50% -120px;
+    background-image: url(../../img/banner_contacto_2.png);
+    @include header(0,0);
+
 }
 main{
     .tituloForm{
@@ -43,7 +43,6 @@ main{
                }
             .adjunto{
                 grid-area:adjuntos;
-                // position:relative;
                 @extend %botones;
                 .texto{
                     font-size: 1rem;
@@ -79,9 +78,6 @@ main{
 }
 /*Reponsive contacto - tablet*/
 @media screen and (max-width:1024px){
-    .contactoHeader{
-        background-position: 30% -80px; 
-    }
     main{
         form{
             .form{            
@@ -101,7 +97,7 @@ main{
 /*Responsive contacto - mobile*/
 @media screen and (max-width:600px){
     .contactoHeader{
-        background-position: 10% -80px; 
+        background-position-x: -20rem;
     }
     main{
         form{

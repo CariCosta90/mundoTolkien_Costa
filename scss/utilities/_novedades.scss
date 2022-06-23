@@ -1,8 +1,8 @@
 /*estilo pagina novedades*/
 .novedadesHeader{
-    background-image: url(../img/banner_novedades_2.jpg);
-    @include header;
-    background-position: 50% -20px; 
+    background-image: url(../../img/banner_novedades.png);
+    @include header(50%, 0);
+
 }
 main{
     .video{
