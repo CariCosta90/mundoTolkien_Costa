@@ -137,7 +137,7 @@ footer {
 
 /* estilos especificos del home*/
 .indexHeader {
-  background-image: url(../../img/home_banner.jpg);
+  background-image: url(../img/home_banner.jpg);
   background-position-x: 100%;
   background-position-y: 0;
   background-repeat: no-repeat;
@@ -260,7 +260,7 @@ main .books {
 
 /* estilos especificos de página peliculas */
 .peliculasHeader {
-  background-image: url(../../img/banner_peliculas.png);
+  background-image: url(../img/banner_peliculas.png);
   background-position-x: 50%;
   background-position-y: 0px;
   background-repeat: no-repeat;
@@ -355,7 +355,7 @@ main .locaciones {
 
 /*estilo pagina novedades*/
 .novedadesHeader {
-  background-image: url(../../img/banner_novedades.png);
+  background-image: url(../img/banner_novedades.png);
   background-position-x: 50%;
   background-position-y: 0;
   background-repeat: no-repeat;
@@ -388,7 +388,7 @@ main .video {
 /* trabajado con bootstrap */
 /* estilo del header de pag Mundo Tolkien */
 .mTolkienHeader {
-  background-image: url("../../img/banner_razas.png");
+  background-image: url(../img/banner_razas.png);
   background-position-x: 50%;
   background-position-y: 0;
   background-repeat: no-repeat;
@@ -441,7 +441,7 @@ main div .card-style {
 
 /* estilos pagina contacto */
 .contactoHeader {
-  background-image: url(../../img/banner_contacto_2.png);
+  background-image: url(../img/banner_contacto_2.png);
   background-position-x: 0;
   background-position-y: 0;
   background-repeat: no-repeat;

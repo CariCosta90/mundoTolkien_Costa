@@ -2,7 +2,7 @@
 /* trabajado con bootstrap */
 /* estilo del header de pag Mundo Tolkien */
 .mTolkienHeader{
-    background-image: url("../../img/banner_razas.png");
+    background-image: url(../img/banner_razas.png);
     @include header(50%,0);
 }
 
