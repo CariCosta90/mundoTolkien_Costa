@@ -7,7 +7,6 @@
     background-attachment: fixed;
 }
 
-
 @mixin titulos{
     padding: 10px;
     font-family: $letra-macondo;
@@ -20,4 +19,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
 }

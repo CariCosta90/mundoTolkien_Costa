@@ -92,18 +92,16 @@ body{
             margin: 1rem 4rem 1rem 4rem;
             line-height: 2rem;
         }
-        /* animación de zoom en las imagenes*/
         .imgAnimation{
         transition: 0.5s;
         }
         .imgAnimation:hover{
-            transform: scale(1.2);    
+            transform: scale(1.1); 
+            box-shadow: $shadow-uno;    
         }
-        /* tarjetas cast (peliculas y novedades) */
         .cast{
             @include flexMultimedia;
             div{
-                width: 265px;
                 background-color: aliceblue;
                 padding: 5px;
                 text-align: center;
@@ -111,6 +109,8 @@ body{
                 p{
                     color: black;
                     font-family: $letra-macondo;
+                    margin: 0;
+                    padding: 0;
                 }
                 a{
                     text-decoration: none;
@@ -120,7 +120,41 @@ body{
                         width: 1rem;
                     }
                 }
+                .flip-card{
+                    width: 214px;
+                    height: 317px;
+                    &:hover .flip-card-inner{
+                        transform: rotateY(180deg);
+                    }
+                    .flip-card-inner{
+                        display: flex;
+                        justify-content: space-around;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        transition: transform 0.8s;
+                        transform-style: preserve-3d;
+                        .flip-card-front, .flip-card-back{
+                            position: absolute; 
+                            backface-visibility: hidden;
+                            img{
+                                width: 214px;
+                                height: 300px;                                
+                            }
+                        }
+                        .flip-card-back{                       
+                            transform: rotateY(180deg);
+                        }
+                    }
+                }
             }
+        }
+        .scroll-top{
+            @extend %botones;
+            position: fixed;
+            bottom: 30%;    
+            right: 1rem;
+            border: solid 1.5px #212F3D;
         }
     }
 }
